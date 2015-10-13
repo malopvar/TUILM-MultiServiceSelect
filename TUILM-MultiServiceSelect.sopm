@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.1">
+    <Name>TUILM-MultiServiceSelect</Name>
+    <Version>4.0.6</Version>
+    <Vendor>Znuny GmbH</Vendor>
+    <URL>http://znuny.com/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Description Lang="en">MultiServiceSelect</Description>
+    <Framework>4.x.x</Framework>
+    <Filelist>
+        <File Location="Kernel/Config/Files/OTRSMultiServiceSelect.xml" Permission="644"/>
+        <File Location="Kernel/Language/de_OTRSMultiServiceSelect.pm" Permission="644"/>
+        <File Location="Custom/Kernel/Output/HTML/OTRSMultiServiceSelect.pm" Permission="644"/>
+        <File Location="Custom/Kernel/Output/HTML/OTRSMultiServiceSelectCustomer.pm" Permission="644"/>
+        <File Location="Custom/Kernel/Output/HTML/OutputFilterOTRSMultiServiceSelect.pm" Permission="644"/>
+        <File Location="Custom/Kernel/Output/HTML/OutputFilterDashboardChanges.pm" Permission="644"/>
+        <File Location="Custom/Kernel/Output/HTML/OutputFilterNewTicketChanges.pm" Permission="644"/>
+        <File Location="var/httpd/htdocs/js/Core.OTRSMultiServiceSelect.js" Permission="644"/>
+        <File Location="var/httpd/htdocs/js/jquery.jstree.js" Permission="644"/>		
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/jquery.jstree.js" Permission="644"/>
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/_lib/jquery.cookie.js" Permission="644"/>	
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/_lib/jquery.hotkeys.js" Permission="644"/>	
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/themes/default_d.gif" Permission="644"/>	
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/themes/default_d.png" Permission="644"/>	
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/themes/default_dot_for_ie.gif" Permission="644"/>	
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/themes/default_style.css" Permission="644"/>	
+        <File Location="var/httpd/htdocs/js/thirdparty/jquery-jstree-1.0rc2/themes/default_throbber.gif" Permission="644"/>		
+    </Filelist>
+</otrs_package>

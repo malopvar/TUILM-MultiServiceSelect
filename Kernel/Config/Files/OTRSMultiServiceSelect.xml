@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="1.0" init="Config">
+    <ConfigItem Name="Frontend::Output::FilterElementPost###OTRSMultiServiceSelect" Required="0" Valid="1">
+        <Description Translatable="1">Module to show multi-select-fields in the agent interface.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>Core</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::OTRSMultiServiceSelect</Item>
+                <Item Key="Templates">
+                    <Hash>
+                        <Item Key="AgentTicketPhone">1</Item>
+                        <Item Key="AgentTicketEmail">1</Item>
+                        <Item Key="AgentTicketFreeText">1</Item>
+                        <Item Key="AgentTicketActionCommon">1</Item>
+                        <Item Key="AgentTicketCompose">1</Item>
+                    </Hash>
+                </Item>
+                <Item Key="Debug">0</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Frontend::Output::FilterElementPost###OTRSMultiServiceSelectCustomer" Required="0" Valid="1">
+        <Description Translatable="1">Module to show multi-select-fields in the customer interface.</Description>
+        <Description Lang="de">Modul zum Anzeigen von Multi-Select-Feldern.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>Core</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::OTRSMultiServiceSelectCustomer</Item>
+                <Item Key="Templates">
+                    <Hash>
+                        <Item Key="CustomerTicketMessage">1</Item>
+                    </Hash>
+                </Item>
+                <Item Key="Debug">0</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="OTRSMultiServiceSelectTree::UseJSTree" Required="1" Valid="1">
+        <Description Translatable="1">This Option defines whether a javascript tree is used for the service selection.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>OutputFilter</SubGroup>
+        <Setting>
+            <Option SelectedID="0">
+                <Item Key="0">No</Item>
+                <Item Key="1">Yes</Item>
+            </Option>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="OTRSMultiServiceSelectTree::ExpandJSTree" Required="1" Valid="1">
+        <Description Translatable="1">This Option defines whether the javascript tree is expended.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>OutputFilter</SubGroup>
+        <Setting>
+            <Option SelectedID="2">
+                <Item Key="0">No</Item>
+                <Item Key="1">All</Item>
+                <Item Key="2">First level</Item>
+            </Option>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Frontend::Output::FilterElementPre###OTRSMultiServiceSelectTree" Required="0" Valid="1">
+        <Description Translatable="1">Module to show a service tree view in the ticket search.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>OutputFilter</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::OutputFilterOTRSMultiServiceSelect</Item>
+                <Item Key="Templates">
+                    <Hash>
+                        <Item Key="AgentTicketSearch">1</Item>
+                        <Item Key="CustomerTicketSearch">1</Item>
+                    </Hash>
+                </Item>
+                <Item Key="Debug">0</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Loader::Agent::CommonJS###001-OTRSMultiServiceSelect" Required="1" Valid="1">
+        <Description Translatable="1">Define list of custom JS files for the agent interface.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>Core::Web</SubGroup>
+        <Setting>
+            <Array>
+                <Item>Core.OTRSMultiServiceSelect.js</Item>
+                <Item>thirdparty/jquery-jstree-1.0rc2/jquery.jstree.js</Item>
+            </Array>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Loader::Customer::CommonJS###001-OTRSMultiServiceSelect" Required="1" Valid="1">
+        <Description Translatable="1">Define list of custom JS files for the customer interface.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>Core::Web</SubGroup>
+        <Setting>
+            <Array>
+                <Item>Core.OTRSMultiServiceSelect.js</Item>
+                <Item>thirdparty/jquery-jstree-1.0rc2/jquery.jstree.js</Item>
+            </Array>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="Ticket::Frontend::AgentTicketSearch###Defaults###ServiceIDs" Required="0" Valid="0">
+        <Description Translatable="1">Defines the default shown ticket search attribute for ticket search screen.</Description>
+        <Group>Ticket</Group>
+        <SubGroup>Frontend::Agent::Ticket::ViewSearch</SubGroup>
+        <Setting>
+            <String></String>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="OTRSMultiServiceSelect::RequiredLevel" Required="1" Valid="1">
+        <Description Translatable="1">Defines if and up to which level a service must be selected.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>Core</SubGroup>
+        <Setting>
+            <Option SelectedID="undefined">
+                <Item Key="undefined">-</Item>
+                <Item Key="0">01</Item>
+                <Item Key="1">02</Item>
+                <Item Key="2">03</Item>
+                <Item Key="3">04</Item>
+                <Item Key="4">05</Item>
+                <Item Key="5">06</Item>
+                <Item Key="6">07</Item>
+                <Item Key="7">08</Item>
+                <Item Key="8">09</Item>
+                <Item Key="9">10</Item>
+            </Option>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="OTRSMultiServiceSelect::RequiredLastLevel" Required="1" Valid="1">
+        <Description Translatable="1">Defines if last level of service must be selected.</Description>
+        <Group>OTRSMultiServiceSelect</Group>
+        <SubGroup>Core</SubGroup>
+        <Setting>
+            <Option SelectedID="0">
+                <Item Key="0">no</Item>
+                <Item Key="1">yes</Item>
+            </Option>
+        </Setting>
+    </ConfigItem>
+</otrs_config>
